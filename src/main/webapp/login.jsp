@@ -9,12 +9,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+<jsp:include page="partials/header.jsp">
+    <jsp:param name="title" value="Please Log In"/>
+</jsp:include>
     <title>Title</title>
 </head>
 <body>
 <%@ include file="/partials/navbar.jsp"%>
 
-<form action="/login.jsp" method="post">
+<div  class="container">
+<h1>Please Log in</h1>
+<form action="/login" method="post">
 
     <label for="username">username:</label>
     <input type="text" id="username" name="username">
@@ -26,24 +31,25 @@
     <input type="submit" value="Sign in">
 
 </form>
+</div>
 
 <%--JSTL--%>
-<c:if test="${param.username == 'admin'}">
-    <c:if test="${param.password == 'password'}">
-        <%response.sendRedirect("http://localhost:8080/profile.jsp");%>
-    </c:if>
-</c:if>
+<%--<c:if test="${param.username == 'admin'}">--%>
+<%--    <c:if test="${param.password == 'password'}">--%>
+<%--        <%response.sendRedirect("http://localhost:8080/profile.jsp");%>--%>
+<%--    </c:if>--%>
+<%--</c:if>--%>
 
 <%--JAVA--%>
-<%
-    if (request.getMethod().equalsIgnoreCase("post"));
+<%--<%--%>
+<%--    if (request.getMethod().equalsIgnoreCase("post"));--%>
 
-    String username = request.getParameter("username");
-    String password = request.getParameter("password");
+<%--    String username = request.getParameter("username");--%>
+<%--    String password = request.getParameter("password");--%>
 
-    if(username.equalsIgnoreCase("admin") && password.equals("password")){
-        response.sendRedirect("/profile.jsp");
-    }
-%>
+<%--    if(username.equalsIgnoreCase("admin") && password.equals("password")){--%>
+<%--        response.sendRedirect("/profile.jsp");--%>
+<%--    }--%>
+<%--%>--%>
 </body>
 </html>

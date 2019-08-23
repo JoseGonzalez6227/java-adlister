@@ -14,8 +14,8 @@
 <nav>
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#"></a>Register</li>
-        <li><a href="/login.jsp"></a>Login</li>
+        <li><a href="#">Register</a></li>
+        <li><a href="/login">Login</a></li>
     </ul>
 </nav>
 </body>

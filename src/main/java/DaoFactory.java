@@ -11,14 +11,4 @@ public class DaoFactory {
         }
         return adsDao;
     }
-
-//    private static Products productsDao;
-//
-//    public static Products getProductsDao() {
-//        if (productsDao == null) {
-//            productsDao = new ProductsDao();
-//        }
-//        return productsDao;
-//    }
-
 }
